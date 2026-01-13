@@ -13,7 +13,7 @@ st.write(
 
 
 # Load dataset
-df = pd.read_csv("data/StudentsPerformance.csv")
+df = pd.read_csv("StudentsPerformance.csv")
 
 # Feature engineering
 df['average_score'] = df[['math score', 'reading score', 'writing score']].mean(axis=1)
@@ -55,6 +55,7 @@ sns.histplot(df['average_score'], bins=10, kde=True, ax=ax)
 st.pyplot(fig)
 
 st.success("Analysis completed.")
+
 
 
 
